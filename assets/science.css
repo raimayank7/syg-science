@@ -1,0 +1,23 @@
+/* science: reading pages, diagrams, terms */
+:root{--sun:#fde68a;--wat:#bfdbfe;--land:#d9f0c4;--leaf:#bbf7d0}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--sun:#7a5d0a;--wat:#1e3a5f;--land:#27401d;--leaf:#14532d}}
+:root[data-theme=dark]{--sun:#7a5d0a;--wat:#1e3a5f;--land:#27401d;--leaf:#14532d}
+.sci .lead{font-size:1.08rem;color:var(--soft)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0 4px}
+.meta .tag{font-size:.84rem}
+.btn.sm,.chips button{min-height:40px}
+.fig{margin:18px 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px;overflow-x:auto}
+.dia{display:block;width:100%;min-width:540px;height:auto;font-family:var(--font)}
+.fig figcaption{font-size:.84rem;color:var(--soft);margin-top:6px;position:sticky;left:0}
+.sci-text{font-size:1.04rem;line-height:1.72}
+.sci-text h2{margin-top:1.5em}
+.eq{background:var(--surface2);border-radius:10px;padding:10px 14px;font-weight:600;text-align:center;overflow-wrap:anywhere}
+.eq span{color:var(--soft);font-weight:400}
+dl.terms{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:6px 16px;margin:10px 0}
+dl.terms dt{font-weight:700}dl.terms dd{margin:0}
+@media (max-width:520px){dl.terms{grid-template-columns:1fr}dl.terms dd{margin-bottom:8px}}
+.act{background:var(--surface);border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px}
+.learn{margin:22px 0 6px}
+.grid li.done a::after{content:"✓";color:var(--ok);font-weight:700;margin-left:auto;padding-left:8px}
+.grid li.done a small{margin-left:0}
+@media print{.meta .btn,.learn,.grid,.note,.btn,.hint{display:none!important}.fig{border:0}details{border:0;padding:0}details>*{display:block!important}}
